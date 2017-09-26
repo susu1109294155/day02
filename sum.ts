@@ -1,9 +1,8 @@
-function jia():any{
-    var a:number = 2;
-    var b:number = 2;
-    var c:number=a+b;
-    var d:string = ""+c;
 
-    document.getElementById("sumid").innerHTML=d;
-   
+const d = () => {
+	const a: number = parseInt(document.getElementById("aid").innerHTML);
+	const b: number = parseInt(document.getElementById("bid").innerHTML);
+	const c: string = a + b + "";
+	document.write(c);
 }
+
