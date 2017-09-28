@@ -1,15 +1,19 @@
 
 function A() {
-	var promise = new Promise(function (resolve, reject) {
-		console.log("start 1");
+	return new Promise((resolve, reject) => {
+		setTimeout(() => {
+			resolve();
+		}, 1000);
 	});
-	return promise;
 }
-function B() {
-	console.log("start 2");
+A().then(() => {
+	console.log(10);
+	return A();
+}).then(() => {
+	console.log(20);
+	return A();
+}).then(() => {
+	console.log(30);
+	return A();
 
-};
-function C() {
-	console.log("start 3");
-
-}
+})
